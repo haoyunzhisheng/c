@@ -1,0 +1,51 @@
+#include "stdio.h"
+#include <time.h>
+#include <stdlib.h>
+
+void menu()
+{
+	printf("          \n");
+	printf("  1.开玩  \n");
+	printf("  0.不玩  \n");
+	printf("          \n");
+
+}
+
+void game()
+{
+	int ret = rand() % 100 + 1;
+	int num = 0;
+	while (num != ret)
+	{
+		scanf("%d", &num);
+		if (num > ret)
+		{
+			printf("猜大了\n");
+		}
+		else if (num < ret)
+		{
+			printf("猜小了\n");
+		}
+		else
+		{
+			printf("猜对了\n");
+		}
+	}
+}
+int main()
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));
+	menu();
+	scanf("%d\n", &input);
+	if (input == 1)
+	{
+		printf("游戏开始\n");
+		game();
+	}
+	else
+	{
+		printf("游戏结束");
+	}
+	return 0;
+}

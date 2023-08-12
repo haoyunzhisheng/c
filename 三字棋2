@@ -1,0 +1,11 @@
+#pragma once
+
+#define ROW 3
+#define COL 3
+
+void Init_Board(char board[ROW][COL], int row, int col);
+void Display_Board(char board[ROW][COL], int row, int col);
+void Gamer_Move(char board[ROW][COL], int row, int col);
+void Computer_Move(char board[ROW][COL], int row, int col);
+char Is_Win(char board[ROW][COL], int row, int col);
+int Is_Full(char board[ROW][COL], int row, int col);
